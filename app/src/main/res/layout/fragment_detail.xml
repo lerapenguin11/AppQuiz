@@ -363,7 +363,7 @@
                 android:id="@+id/tv_start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Start Quiz"
+                android:text="@string/start_quiz"
                 android:fontFamily="@font/ubuntu_medium"
                 android:textColor="@color/white"
                 android:textSize="17sp"

@@ -11,4 +11,5 @@
     <string name="tap_on_options_to_select_the_correct_answer">Tap on options to select the correct answer</string>
     <string name="tap_on_the_bookmark_icon_to_save_interesting_questions">Tap on the bookmark icon to save interesting questions</string>
     <string name="click_submit_if_you_are_sure_you_want_to_complete_all_the_quizzes">Click submit if you are sure you want to complete all the quizzes</string>
+    <string name="start_quiz">Start Quiz</string>
 </resources>
