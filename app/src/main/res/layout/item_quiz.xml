@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:background="@drawable/bg_item_quiz"
+    android:layout_marginBottom="15dp"
+    android:elevation="1dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bg_item_quiz_icon"
+        android:backgroundTint="@color/background"
+        app:cardCornerRadius="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:cardCornerRadius="10dp"
+            app:cardPreventCornerOverlap="false">
+
+            <ImageView
+                android:id="@+id/ic_icon_quiz"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:preserveLegacyExternalStorage="true"
+                android:requestLegacyExternalStorage="true"
+                android:scaleType="fitXY"
+                tools:srcCompat="@drawable/bg_item_quiz_icon" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fon"
+        app:layout_constraintStart_toEndOf="@+id/fon"
+        app:layout_constraintTop_toTopOf="@+id/fon">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_time_quiz" />
+
+        <TextView
+            android:id="@+id/tv_tile_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textAllCaps="true"
+            android:textColor="@color/background"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="UI UX Design" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tile_quiz"
+            app:srcCompat="@drawable/ic_count_quiz" />
+
+        <TextView
+            android:id="@+id/tv_count_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/nunito"
+            android:textColor="#999999"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            tools:text="10 Question" />
+
+        <TextView
+            android:id="@+id/tv_time_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:textColor="#999999"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/tv_count_quiz"
+            tools:text="1 hour 15 min" />
+
+
+        <!--<com.example.appquiz.utilits.GradientTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UI UX Design"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="17sp"
+            android:textAllCaps="true"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_quiz"
+        android:indeterminateOnly="false"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:progressDrawable="@drawable/custom_progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout2"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar_quiz"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar_quiz"
+        app:layout_constraintStart_toStartOf="@+id/progressBar_quiz"
+        app:layout_constraintTop_toTopOf="@+id/progressBar_quiz">
+
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="100%"
+            android:fontFamily="@font/nunito"
+            android:textColor="#999999"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

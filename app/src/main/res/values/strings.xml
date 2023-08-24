@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppQuiz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="let_s_test_your_knowledge">Let\'s test your knowledge</string>
+    <string name="search">Search…</string>
+    <string name="available_quizzes">Available Quizzes</string>
+</resources>
