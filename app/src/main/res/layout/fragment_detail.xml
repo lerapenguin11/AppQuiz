@@ -234,7 +234,7 @@
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@+id/constraintLayout7"
                 app:layout_constraintStart_toStartOf="@+id/tv_time_quiz_details"
-                tools:text="1Total duration of the quiz" />
+                android:text="@string/total_duration_of_the_quiz" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView

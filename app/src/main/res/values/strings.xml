@@ -12,4 +12,10 @@
     <string name="tap_on_the_bookmark_icon_to_save_interesting_questions">Tap on the bookmark icon to save interesting questions</string>
     <string name="click_submit_if_you_are_sure_you_want_to_complete_all_the_quizzes">Click submit if you are sure you want to complete all the quizzes</string>
     <string name="start_quiz">Start Quiz</string>
+    <string name="question">Question</string>
+    <string name="get">GET</string>
+    <string name="point">Points</string>
+    <string name="point_for_correct_answer">point for a correct answer</string>
+    <string name="total_duration_of_the_quiz">Total duration of the quiz</string>
+    <string name="rule_point">point awarded for a correct answer and no marks for a incorrect answer</string>
 </resources>
