@@ -20,5 +20,6 @@ class TestViewModel : ViewModel() {
     }
 
     var id : Int = 0
-    var index = 0
+    var index : Int = 0
+    var point : Int = 0
 }

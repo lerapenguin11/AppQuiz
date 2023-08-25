@@ -12,17 +12,19 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import com.example.appquiz.R
 import com.example.appquiz.databinding.FragmentTestBinding
 import com.example.appquiz.utilits.replaceFragmentMainActivityCardGame
 import com.example.appquiz.viewModel.TestViewModel
+import com.example.appquiz.viewModel.TimerQuizViewModel
 
 class TestFragment() : Fragment() {
     private lateinit var testViewModel : TestViewModel
     private var _binding : FragmentTestBinding? = null
     private val binding get() = _binding!!
-    private var position = 0
     private var checkClick = true
+    private lateinit var timerViewModel : TimerQuizViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +34,8 @@ class TestFragment() : Fragment() {
 
         testViewModel = ViewModelProvider(requireActivity()).get(
             TestViewModel::class.java)
+
+        timerViewModel = ViewModelProvider(requireActivity()).get(TimerQuizViewModel::class.java)
 
         return binding.root
     }
@@ -58,22 +62,6 @@ class TestFragment() : Fragment() {
         })
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
-    private fun newQuestion(countQuestion: Int, idQuestion: Int) {
-        if (countQuestion == idQuestion){
-            binding.btNext.background = resources.getDrawable(R.drawable.bg_count_test)
-            binding.btSubmitQuiz.setOnClickListener {
-                replaceFragmentMainActivityCardGame(HomeFragment())
-            }
-        } else{
-            binding.btNext.setOnClickListener {
-                updateOptionsClick()
-                loadQuestions(testViewModel.index)
-                checkClick = true
-            }
-        }
-    }
-
     private fun updateOptionsClick() {
         notIndicator(binding.tvOptionA, binding.optionA)
         notIndicator(binding.tvOptionB, binding.optionB)
@@ -98,7 +86,7 @@ class TestFragment() : Fragment() {
                 clickIndicator(binding.tvOptionA, binding.optionA)
                 checkClick = false
                 if (position_answer == option_a_position){
-                    //TODO считать очки
+                    testViewModel.point++
                 }
             }
         }
@@ -108,7 +96,7 @@ class TestFragment() : Fragment() {
                 clickIndicator(binding.tvOptionB, binding.optionB)
                 checkClick = false
                 if (position_answer == option_b_position){
-                    //TODO считать очки
+                    testViewModel.point++
                 }
             }
         }
@@ -118,7 +106,7 @@ class TestFragment() : Fragment() {
                 clickIndicator(binding.tvOptionC, binding.optionC)
                 checkClick = false
                 if (position_answer == option_c_position){
-                    //TODO считать очки
+                    testViewModel.point++
                 }
             }
         }
@@ -128,7 +116,8 @@ class TestFragment() : Fragment() {
                 clickIndicator(binding.tvOptionD, binding.optionD)
                 checkClick = false
                 if (position_answer == option_d_position){
-                    //TODO считать очки
+                    testViewModel.point++
+
                 }
             }
         }
@@ -138,8 +127,35 @@ class TestFragment() : Fragment() {
                 clickIndicator(binding.tvOptionE, binding.optionE)
                 checkClick = false
                 if (position_answer == option_e_position){
-                    //TODO считать очки
+                    testViewModel.point++
                 }
+            }
+        }
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private fun newQuestion(countQuestion: Int, idQuestion: Int) {
+        if (countQuestion == idQuestion){
+            binding.textView12.visibility = View.INVISIBLE
+            binding.textView11.visibility = View.VISIBLE
+            binding.btSubmitQuiz.setOnClickListener {
+                timerViewModel.restartTimer()
+                val bundle = Bundle()
+                bundle.putInt("result", testViewModel.point)
+                bundle.putInt("countQuestions", countQuestion)
+                val transaction = activity?.supportFragmentManager?.beginTransaction()
+                val fragment = ResultQuizFragment()
+                fragment.arguments = bundle
+                transaction?.replace(R.id.main_layout, fragment)
+                transaction?.commit()
+            }
+        } else{
+            binding.btSubmitQuiz.setOnClickListener {
+                if (!checkClick){
+                    updateOptionsClick()
+                    loadQuestions(testViewModel.index)
+                    checkClick = true
+                } else Toast.makeText(context, "You haven't answered the question!", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -154,6 +170,14 @@ class TestFragment() : Fragment() {
         super.onResume()
         loadQuestions(testViewModel.index)
         onClick()
+        timerViewModel.startTimer()
+        onTimer()
+    }
+
+    private fun onTimer() {
+        timerViewModel.time.observe(this) { time ->
+            binding.tvTimerTest.text = time
+        }
     }
 
     private fun onClick() {

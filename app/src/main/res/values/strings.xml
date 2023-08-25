@@ -25,4 +25,7 @@
     <string name="e">E</string>
     <string name="submit_quiz">Submit Quiz</string>
     <string name="quiz">Quiz</string>
+    <string name="next">Next</string>
+    <string name="result">Quiz Results</string>
+    <string name="yay_congratulations">Yay! Congratulations!</string>
 </resources>
