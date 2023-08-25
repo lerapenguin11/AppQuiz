@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.example.appquiz.R
 import com.example.appquiz.databinding.FragmentDetailBinding
 import com.example.appquiz.databinding.FragmentHomeBinding
 import com.example.appquiz.utilits.replaceFragmentMainActivityCardGame
+import com.example.appquiz.viewModel.TestViewModel
 import kotlin.properties.Delegates
 
 class DetailFragment : Fragment() {
@@ -18,6 +20,7 @@ class DetailFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var idQuiz by Delegates.notNull<Int>()
+    private lateinit var viewModel : TestViewModel
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -27,9 +30,12 @@ class DetailFragment : Fragment() {
 
         _binding = FragmentDetailBinding.inflate(inflater, container, false)
 
+        viewModel = ViewModelProvider(requireActivity()).get(
+            TestViewModel::class.java)
+
         binding.tvTitleQuizDetails.text = arguments?.getString("title")
         val count = arguments?.getInt("count")
-        binding.tvGetPoints.text = getString(R.string.get) +  " " + (count!! * 10).toString() + getString(R.string.point)
+        binding.tvGetPoints.text = getString(R.string.get) +  " " + (count!! * 10).toString() + " " + getString(R.string.point)
         binding.tvCountQuiz.text = count.toString() + " " + getString(R.string.question)
         binding.tvCountQuizDesc.text = count.toString() + " " + getString(R.string.point_for_correct_answer)
         binding.tvTimeQuizDetails.text = arguments?.getString("time")
@@ -38,7 +44,7 @@ class DetailFragment : Fragment() {
 
         binding.btStartQuiz.setOnClickListener {
             idQuiz = arguments?.getInt("id")!!
-            //TODO ЕРЕДАТЬ ID in VIEWMODEL
+            viewModel.id = idQuiz
             replaceFragmentMainActivityCardGame(TestFragment())
         }
 
