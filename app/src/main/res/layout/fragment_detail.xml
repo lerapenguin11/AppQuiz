@@ -110,7 +110,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/bg_content"
+        android:background="@drawable/bg_content_white"
         android:paddingStart="24dp"
         android:paddingTop="20dp"
         android:paddingEnd="24dp"
