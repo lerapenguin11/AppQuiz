@@ -95,7 +95,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView13">
 
             <ImageView
-                android:id="@+id/ic_star_one"
+                android:id="@+id/ic_star_two"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
                 android:src="@drawable/ic_star_win"
@@ -105,12 +105,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/ic_star_two"
+                android:id="@+id/ic_star_one"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/ic_star_win"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/ic_star_one"
+                app:layout_constraintEnd_toStartOf="@+id/ic_star_two"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,7 +121,7 @@
                 android:src="@drawable/ic_star"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/ic_star_one"
+                app:layout_constraintStart_toEndOf="@+id/ic_star_two"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

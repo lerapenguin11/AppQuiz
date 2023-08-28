@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.appquiz.R
 import com.example.appquiz.business.models.QuizModel
 import com.example.appquiz.presentation.adapter.listener.QuizListener
@@ -28,8 +29,13 @@ class QuizAdapter(val listener : QuizListener) : RecyclerView.Adapter<QuizAdapte
         val quiz : QuizModel = quizList[position]
 
         holder.title.text = quiz.title
-        holder.countQuiz.setText(quiz.countQuiz.toString() + " " + "Question")/* =  + getString(R.string.question)*///
+        holder.countQuiz.setText(quiz.countQuiz.toString() + " " + "Question")
         holder.timeQuiz.text = quiz.time
+        holder.tag.text = "#" + quiz.tagQuiz
+
+        Glide.with(holder.itemView)
+            .load(quiz.icon)
+            .into(holder.icon)
 
         holder.itemView.setOnClickListener {
             listener.quizList(quiz = quiz)
@@ -48,6 +54,7 @@ class QuizAdapter(val listener : QuizListener) : RecyclerView.Adapter<QuizAdapte
         val countQuiz : TextView = view.findViewById(R.id.tv_count_quiz)
         val timeQuiz : TextView = view.findViewById(R.id.tv_time_quiz)
         val icon : ImageView = view.findViewById(R.id.ic_icon_quiz)
+        val tag : TextView = view.findViewById(R.id.tv_tag)
     }
 }
 

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">AppQuiz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="let_s_test_your_knowledge">Vamos testar seus conhecimentos</string>
+    <string name="search">Buscar…</string>
+    <string name="available_quizzes">Cuestionarios Disponibles</string>
+    <string name="detail_quiz">Cuestionario Detallado</string>
+    <string name="brief_explanation_about_this_quiz">Breve explicación sobre este cuestionario</string>
+    <string name="please_read_the_text_below_carefully_so_you_can_understand_it">Lea atentamente el texto a continuación para que pueda entenderlo</string>
+    <string name="tap_on_options_to_select_the_correct_answer">Toque en opciones para seleccionar la respuesta correcta</string>
+    <string name="tap_on_the_bookmark_icon_to_save_interesting_questions">Toque el icono de marcador para guardar preguntas interesantes</string>
+    <string name="click_submit_if_you_are_sure_you_want_to_complete_all_the_quizzes">Haga clic en enviar si está seguro de que desea completar todas las pruebas</string>
+    <string name="start_quiz">Iniciar Prueba</string>
+    <string name="question">Pregunta</string>
+    <string name="get">OBTENER</string>
+    <string name="point">Puntos</string>
+    <string name="point_for_correct_answer">punto para una respuesta correcta</string>
+    <string name="total_duration_of_the_quiz">Duración total del cuestionario</string>
+    <string name="rule_point">punto otorgado por una respuesta correcta y sin puntos por una respuesta incorrecta</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">E</string>
+    <string name="submit_quiz">Enviar Cuestionario</string>
+    <string name="quiz">Cuestionario</string>
+    <string name="next">Siguiente</string>
+    <string name="result">Resultados de la Prueba</string>
+    <string name="yay_congratulations">Yay! ¡Felicitaciones!</string>
+    <string name="_0">0</string>
+    <string name="on_the_main_screen_there_is_a_list_of_quizzes_that_you_can_take">En la pantalla principal hay una lista de cuestionarios que puede realizar</string>
+    <string name="_1_hour_15_min">1 hora y 15 minutos</string>
+    <string name="_10_question">10 Preguntas</string>
+    <string name="ui_ux_design">Diseño UI UX</string>
+    <string name="computer">#Ordenador</string>
+    <string name="after_clicking_on_the_quiz_you_will_find_yourself_on_the_details_screen_there_you_need_to_click_on_the_start_quiz_button">Después de hacer clic en el cuestionario, se encontrará en la pantalla de detalles, allí debe hacer clic en el botón Iniciar cuestionario</string>
+    <string name="on_the_quiz_screen_take_the_test_in_a_limited_time_complete_the_test_by_clicking_the_submit_quiz_button">En la pantalla de prueba, realice la prueba en un tiempo limitado. Complete la prueba haciendo clic en el botón Enviar prueba</string>
+    <string name="what_is_the_meaning_of_ui_ux_design">¿Cuál es el significado del Diseño?</string>
+    <string name="user_interfoce_and_user_experience">Interfaz de Usuario y Experiencia de Usuario</string>
+    <string name="your_reward">Tu recompensa</string>
+    <string name="you_havent_answered_the_question">¡No has respondido a la pregunta!</string>
+</resources>

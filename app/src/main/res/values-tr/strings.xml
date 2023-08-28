@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Uygulama Sınavı</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Merhaba boş parça</string>
+    <string name="let_s_test_your_knowledge">Vamos testar seus conhecimentos</string>
+    <string name="search">Aramak…</string>
+    <string name="available_quizzes">Mevcut Sınavlar</string>
+    <string name="detail_quiz">Detay Testi</string>
+    <string name="brief_explanation_about_this_quiz">Bu sınav hakkında kısa açıklama</string>
+    <string name="please_read_the_text_below_carefully_so_you_can_understand_it">Lütfen aşağıdaki metni dikkatlice okuyunuz, böylece anlayabilirsiniz</string>
+    <string name="tap_on_options_to_select_the_correct_answer">Doğru cevabı seçmek için seçeneklere dokunun</string>
+    <string name="tap_on_the_bookmark_icon_to_save_interesting_questions">İlginç soruları kaydetmek için yer imi simgesine dokunun</string>
+    <string name="click_submit_if_you_are_sure_you_want_to_complete_all_the_quizzes">Tüm testleri tamamlamak istediğinizden eminseniz gönder\'i tıklayın</string>
+    <string name="start_quiz">Testi Başlat</string>
+    <string name="question">Soru</string>
+    <string name="get">ELDE ETMEK</string>
+    <string name="point">Puanlar</string>
+    <string name="point_for_correct_answer">doğru cevap için işaret</string>
+    <string name="total_duration_of_the_quiz">Sınavın toplam süresi</string>
+    <string name="rule_point">Doğru cevaba puan verilir, yanlış cevaba puan verilmez</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">e</string>
+    <string name="submit_quiz">Sınav gönderin</string>
+    <string name="quiz">Sınav</string>
+    <string name="next">Sonraki</string>
+    <string name="result">Sınav Sonuçları</string>
+    <string name="yay_congratulations">Yay! Tebrikler!</string>
+    <string name="_0">0</string>
+    <string name="on_the_main_screen_there_is_a_list_of_quizzes_that_you_can_take">Ana ekranda katılabileceğiniz sınavların bir listesi var</string>
+    <string name="_1_hour_15_min">1 saat 15 dakika</string>
+    <string name="_10_question">10 Soru</string>
+    <string name="ui_ux_design">Kullanıcı Arayüzü Kullanıcı Deneyimi Tasarımı</string>
+    <string name="computer">#Bilgisayar</string>
+    <string name="after_clicking_on_the_quiz_you_will_find_yourself_on_the_details_screen_there_you_need_to_click_on_the_start_quiz_button">Teste tıkladıktan sonra kendinizi Ayrıntılar ekranında bulacaksınız, burada Testi Başlat düğmesine tıklamanız gerekir.</string>
+    <string name="on_the_quiz_screen_take_the_test_in_a_limited_time_complete_the_test_by_clicking_the_submit_quiz_button">Sınav ekranında sınırlı bir süre içinde sınava girin. Testi Gönder düğmesini tıklayarak testi tamamlayın</string>
+    <string name="what_is_the_meaning_of_ui_ux_design">Qual é o significado do Design?</string>
+    <string name="user_interfoce_and_user_experience">Kullanıcı Arayüzü ve Kullanıcı Deneyimi</string>
+    <string name="your_reward">Ödülünüz</string>
+    <string name="you_havent_answered_the_question">Não respondeu à pergunta!</string>
+</resources>

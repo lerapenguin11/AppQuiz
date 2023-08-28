@@ -12,9 +12,9 @@ import androidx.core.content.ContextCompat
 import com.example.appquiz.APP_MAIN_ACTIVITY_QUIZ
 import com.example.appquiz.R
 import com.example.appquiz.databinding.ActivityMainBinding
-import com.example.appquiz.utilits.replaceFragmentMainActivityCardGame
+import com.example.appquiz.utilits.replaceFragmentMainActivityQuizApp
 
-class MainActivity : AppCompatActivity() {
+class QuizAppActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("ObsoleteSdkInt")
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    fun setStatusBarMainActivityGradiant(activity: Activity) {
+    fun setStatusBarQuizAppActivityGradiant(activity: Activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val backgroundActivity = ContextCompat.getDrawable(activity, R.drawable.background)
             val windowActivity: Window = activity.window
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        setStatusBarMainActivityGradiant(this)
-        replaceFragmentMainActivityCardGame(HomeFragment())
+        setStatusBarQuizAppActivityGradiant(this)
+        replaceFragmentMainActivityQuizApp(HomeFragment())
     }
 }

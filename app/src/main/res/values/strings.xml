@@ -2,7 +2,7 @@
     <string name="app_name">AppQuiz</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="let_s_test_your_knowledge">Let\'s test your knowledge</string>
+    <string name="let_s_test_your_knowledge">Vamos testar seus conhecimentos</string>
     <string name="search">Search…</string>
     <string name="available_quizzes">Available Quizzes</string>
     <string name="detail_quiz">Detail Quiz</string>
@@ -28,4 +28,16 @@
     <string name="next">Next</string>
     <string name="result">Quiz Results</string>
     <string name="yay_congratulations">Yay! Congratulations!</string>
+    <string name="_0">0</string>
+    <string name="on_the_main_screen_there_is_a_list_of_quizzes_that_you_can_take">On the main screen there is a list of quizzes that you can take</string>
+    <string name="_1_hour_15_min">1 hour 15 min</string>
+    <string name="_10_question">10 Question</string>
+    <string name="ui_ux_design">UI UX Design</string>
+    <string name="computer">#Computer</string>
+    <string name="after_clicking_on_the_quiz_you_will_find_yourself_on_the_details_screen_there_you_need_to_click_on_the_start_quiz_button">After clicking on the quiz, you will find yourself on the Details screen, there you need to click on the Start Quiz button</string>
+    <string name="on_the_quiz_screen_take_the_test_in_a_limited_time_complete_the_test_by_clicking_the_submit_quiz_button">On the quiz screen, take the test in a limited time. Complete the test by clicking the Submit Quiz button</string>
+    <string name="what_is_the_meaning_of_ui_ux_design">What is the meaning of Design?</string>
+    <string name="user_interfoce_and_user_experience">User Interfoce and User Experience</string>
+    <string name="your_reward">Your reward</string>
+    <string name="you_havent_answered_the_question">You have not answered the question!</string>
 </resources>

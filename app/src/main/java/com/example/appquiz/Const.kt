@@ -1,5 +1,5 @@
 package com.example.appquiz
 
-import com.example.appquiz.presentation.MainActivity
+import com.example.appquiz.presentation.QuizAppActivity
 
-lateinit var APP_MAIN_ACTIVITY_QUIZ : MainActivity
+lateinit var APP_MAIN_ACTIVITY_QUIZ : QuizAppActivity

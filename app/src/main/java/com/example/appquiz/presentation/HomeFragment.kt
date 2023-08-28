@@ -8,12 +8,18 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.Room
 import com.example.appquiz.R
+import com.example.appquiz.business.db.TestResult
+import com.example.appquiz.business.db.TestResultDatabase
 import com.example.appquiz.business.models.QuizModel
 import com.example.appquiz.databinding.FragmentHomeBinding
 import com.example.appquiz.presentation.adapter.QuizAdapter
 import com.example.appquiz.presentation.adapter.listener.QuizListener
 import com.example.appquiz.viewModel.QuizViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class HomeFragment : Fragment(), QuizListener {
 
@@ -37,11 +43,19 @@ class HomeFragment : Fragment(), QuizListener {
     override fun onResume() {
         super.onResume()
         observeData()
-        onClick()
+        displayPoints()
     }
 
-    private fun onClick() {
-        //points dialog
+    private fun displayPoints() {
+        val database = TestResultDatabase.DatabaseProvider.getDatabase(requireContext())
+        val testResultDao = database.testResultDao()
+
+        runBlocking {
+            launch(Dispatchers.IO) {
+                val previousScore = testResultDao.getTotalScore()
+                binding.tvPoint.text = previousScore.toString()
+            }
+        }
     }
 
     private fun observeData() {

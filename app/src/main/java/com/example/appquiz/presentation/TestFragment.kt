@@ -12,10 +12,9 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import com.example.appquiz.R
 import com.example.appquiz.databinding.FragmentTestBinding
-import com.example.appquiz.utilits.replaceFragmentMainActivityCardGame
+import com.example.appquiz.utilits.replaceFragmentMainActivityQuizApp
 import com.example.appquiz.viewModel.TestViewModel
 import com.example.appquiz.viewModel.TimerQuizViewModel
 
@@ -139,6 +138,7 @@ class TestFragment() : Fragment() {
             binding.textView12.visibility = View.INVISIBLE
             binding.textView11.visibility = View.VISIBLE
             binding.btSubmitQuiz.setOnClickListener {
+                testViewModel.index = 0
                 timerViewModel.restartTimer()
                 val bundle = Bundle()
                 bundle.putInt("result", testViewModel.point)
@@ -148,6 +148,7 @@ class TestFragment() : Fragment() {
                 fragment.arguments = bundle
                 transaction?.replace(R.id.main_layout, fragment)
                 transaction?.commit()
+                testViewModel.point = 0
             }
         } else{
             binding.btSubmitQuiz.setOnClickListener {
@@ -155,7 +156,7 @@ class TestFragment() : Fragment() {
                     updateOptionsClick()
                     loadQuestions(testViewModel.index)
                     checkClick = true
-                } else Toast.makeText(context, "You haven't answered the question!", Toast.LENGTH_SHORT).show()
+                } else Toast.makeText(context,getString(R.string.you_havent_answered_the_question) , Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -182,7 +183,7 @@ class TestFragment() : Fragment() {
 
     private fun onClick() {
         binding.icArrowHome.setOnClickListener {
-            replaceFragmentMainActivityCardGame(HomeFragment())
+            replaceFragmentMainActivityQuizApp(HomeFragment())
         }
     }
 }

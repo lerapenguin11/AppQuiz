@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">AppQuiz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="let_s_test_your_knowledge">მოდით შეამოწმოთ თქვენი ცოდნა</string>
+    <string name="search">ძიება…</string>
+    <string name="available_quizzes">ხელმისაწვდომი ვიქტორინები</string>
+    <string name="detail_quiz">დეტალური ვიქტორინა</string>
+    <string name="brief_explanation_about_this_quiz">მოკლე ახსნა ამ ვიქტორინის შესახებ</string>
+    <string name="please_read_the_text_below_carefully_so_you_can_understand_it">გთხოვთ, ყურადღებით წაიკითხოთ ქვემოთ მოცემული ტექსტი, ასე რომ თქვენ გესმით</string>
+    <string name="tap_on_options_to_select_the_correct_answer">შეეხეთ ვარიანტებს სწორი პასუხის შესარჩევად</string>
+    <string name="tap_on_the_bookmark_icon_to_save_interesting_questions">შეეხეთ სანიშნეების ხატულას საინტერესო კითხვების შესანახად</string>
+    <string name="click_submit_if_you_are_sure_you_want_to_complete_all_the_quizzes">დააჭირეთ გაგზავნას, თუ დარწმუნებული ხართ, რომ გსურთ შეავსოთ ყველა ვიქტორინა</string>
+    <string name="start_quiz">დაწყება ვიქტორინა</string>
+    <string name="question">კითხვა</string>
+    <string name="get">მიიღეთ</string>
+    <string name="point">ქულები</string>
+    <string name="point_for_correct_answer">წერტილი სწორი პასუხი</string>
+    <string name="total_duration_of_the_quiz">ვიქტორინის საერთო ხანგრძლივობა</string>
+    <string name="rule_point">ქულა მიენიჭა სწორი პასუხი და არ ნიშნები არასწორი პასუხი</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">E</string>
+    <string name="submit_quiz">წარადგინეთ ვიქტორინა</string>
+    <string name="quiz">ვიქტორინა</string>
+    <string name="next">შემდეგი</string>
+    <string name="result">ვიქტორინის შედეგები</string>
+    <string name="yay_congratulations">ეა! გილოცავთ!</string>
+    <string name="_0">0</string>
+    <string name="on_the_main_screen_there_is_a_list_of_quizzes_that_you_can_take">მთავარ ეკრანზე არის ჩამონათვალი ტესტები, რომ თქვენ შეგიძლიათ მიიღოს</string>
+    <string name="_1_hour_15_min">1 საათი 15 წთ</string>
+    <string name="_10_question">10 კითხვა</string>
+    <string name="ui_ux_design">UI UX დიზაინი</string>
+    <string name="computer">#კომპიუტერი</string>
+    <string name="after_clicking_on_the_quiz_you_will_find_yourself_on_the_details_screen_there_you_need_to_click_on_the_start_quiz_button">ვიქტორინაზე დაწკაპუნების შემდეგ, თქვენ აღმოჩნდებით დეტალების ეკრანზე, იქ უნდა დააჭიროთ ღილაკს დაწყება ვიქტორინა</string>
+    <string name="on_the_quiz_screen_take_the_test_in_a_limited_time_complete_the_test_by_clicking_the_submit_quiz_button">ვიქტორინის ეკრანზე გაიარეთ ტესტი შეზღუდულ დროში. დაასრულეთ ტესტი Submit Quiz ღილაკზე დაჭერით</string>
+    <string name="what_is_the_meaning_of_ui_ux_design">რა მნიშვნელობა აქვს დიზაინს?</string>
+    <string name="user_interfoce_and_user_experience">მომხმარებლის ინტერფეისი და მომხმარებლის გამოცდილება</string>
+    <string name="your_reward">თქვენი ჯილდო</string>
+    <string name="you_havent_answered_the_question">თქვენ არ უპასუხა კითხვაზე!</string>
+</resources>

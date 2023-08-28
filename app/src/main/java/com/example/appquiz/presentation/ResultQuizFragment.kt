@@ -9,9 +9,8 @@ import android.view.ViewGroup
 import com.example.appquiz.R
 import com.example.appquiz.business.db.TestResult
 import com.example.appquiz.business.db.TestResultDatabase
-import com.example.appquiz.databinding.FragmentDetailBinding
 import com.example.appquiz.databinding.FragmentResultQuizBinding
-import com.example.appquiz.utilits.replaceFragmentMainActivityCardGame
+import com.example.appquiz.utilits.replaceFragmentMainActivityQuizApp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -39,11 +38,9 @@ class ResultQuizFragment : Fragment() {
         runBlocking {
             launch(Dispatchers.IO) {
                 val previousScore = testResultDao.getTotalScore()
-                val newScore = previousScore + result!!
-                // Do something with the totalScore
-                val testResult = TestResult(score = newScore * 10)
+                val newScore = result!!
+                val testResult = TestResult(score = newScore)
                 testResultDao.insert(testResult)
-
             }
         }
 
@@ -62,10 +59,10 @@ class ResultQuizFragment : Fragment() {
             binding.icStarFree.setImageResource(R.drawable.ic_star)
         }
 
-        binding.textView13.text = "Your reward" + " " + (result!! *10).toString()
+        binding.textView13.text = getString(R.string.your_reward) + " " + (result!! *10).toString()
 
         binding.btNext.setOnClickListener {
-            replaceFragmentMainActivityCardGame(HomeFragment())
+            replaceFragmentMainActivityQuizApp(HomeFragment())
         }
 
         return binding.root

@@ -34,6 +34,5 @@ class TimerQuizViewModel : ViewModel(){
     fun restartTimer() {
         countDownTimer.cancel()
         remainingTime = timerDuration
-            //startTimer()
     }
 }

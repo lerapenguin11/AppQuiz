@@ -5,111 +5,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".presentation.TestFragment">
+    tools:context=".presentation.onBoarding.ThirdTestFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout4"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_medium"
         android:padding="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/title_test"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:fontFamily="@font/ubuntu_medium"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/ic_arrow_home"
-            app:layout_constraintEnd_toStartOf="@+id/constraintLayout14"
-            app:layout_constraintStart_toEndOf="@+id/ic_arrow_home"
-            app:layout_constraintTop_toTopOf="@+id/ic_arrow_home"
-            tools:text="UI UX Design Quiz" />
-
-        <ImageView
-            android:id="@+id/ic_arrow_home"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/ic_arrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_search"
-            android:paddingStart="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/title_test"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/title_test">
-
-            <TextView
-                android:id="@+id/tv_timer_test"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito"
-                android:paddingStart="2dp"
-                android:paddingTop="4dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="4dp"
-                android:textColor="@color/background"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="13:34" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:src="@drawable/ic_time_quiz_test"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_timer_test"
-                app:layout_constraintEnd_toStartOf="@+id/tv_timer_test"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_timer_test" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/bg_content_white"
-        android:paddingStart="24dp"
-        android:paddingTop="20dp"
-        android:paddingEnd="24dp"
+        android:text="@string/on_the_quiz_screen_take_the_test_in_a_limited_time_complete_the_test_by_clicking_the_submit_quiz_button"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="48dp"
-            android:layout_height="4dp"
-            android:background="@drawable/bg_indicator"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_corners"
+        android:padding="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_count_test"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bt_submit_quiz"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="24dp"
-            tools:listitem="@layout/item_count_test"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_bt_gradient"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/submit_quiz"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout10"
@@ -119,7 +66,7 @@
             android:paddingBottom="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_count_test">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tv_question"
@@ -131,7 +78,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="What is the meaning of UI UX Design ?" />
+                android:text="@string/what_is_the_meaning_of_ui_ux_design" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/box_option_a"
@@ -154,7 +101,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/option_a"
                     app:layout_constraintTop_toTopOf="@+id/option_a"
-                    tools:text="User Interfoce and User Experience" />
+                    android:text="@string/user_interfoce_and_user_experience" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/option_a"
@@ -192,15 +139,15 @@
                     android:id="@+id/tv_option_b"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
                     android:fontFamily="@font/ubuntu"
                     android:textColor="#333333"
                     android:textSize="16sp"
-                    android:layout_marginStart="15dp"
                     app:layout_constraintBottom_toBottomOf="@+id/option_b"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/option_b"
                     app:layout_constraintTop_toTopOf="@+id/option_b"
-                    tools:text="User Interfoce and User Experience" />
+                    android:text="@string/user_interfoce_and_user_experience" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/option_b"
@@ -261,15 +208,15 @@
                     android:id="@+id/tv_option_c"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
                     android:fontFamily="@font/ubuntu"
                     android:textColor="#333333"
                     android:textSize="16sp"
-                    android:layout_marginStart="15dp"
                     app:layout_constraintBottom_toBottomOf="@+id/option_c"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/option_c"
                     app:layout_constraintTop_toTopOf="@+id/option_c"
-                    tools:text="User Interfoce and User Experience" />
+                    android:text="@string/user_interfoce_and_user_experience" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -315,7 +262,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/option_d"
                     app:layout_constraintTop_toTopOf="@+id/option_d"
-                    tools:text="User Interfoce and User Experience" />
+                    android:text="@string/user_interfoce_and_user_experience" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -351,68 +298,16 @@
                     android:id="@+id/tv_option_e"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
                     android:fontFamily="@font/ubuntu"
                     android:textColor="#333333"
                     android:textSize="16sp"
-                    android:layout_marginStart="15dp"
                     app:layout_constraintBottom_toBottomOf="@+id/option_e"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/option_e"
                     app:layout_constraintTop_toTopOf="@+id/option_e"
-                    tools:text="User Interfoce and User Experience" />
+                    android:text="@string/user_interfoce_and_user_experience" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintVertical_bias="1"
-            android:layout_marginBottom="40dp"
-            android:paddingStart="45dp"
-            android:paddingEnd="45dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/bt_submit_quiz"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_bt_gradient"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                 <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:text="@string/submit_quiz"
-                    android:textSize="17sp"
-                     android:visibility="invisible"
-                     android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:text="@string/next"
-                    android:textSize="17sp"
-                    android:visibility="visible"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

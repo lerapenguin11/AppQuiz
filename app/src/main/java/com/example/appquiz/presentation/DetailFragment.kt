@@ -9,8 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.appquiz.R
 import com.example.appquiz.databinding.FragmentDetailBinding
-import com.example.appquiz.databinding.FragmentHomeBinding
-import com.example.appquiz.utilits.replaceFragmentMainActivityCardGame
+import com.example.appquiz.utilits.replaceFragmentMainActivityQuizApp
 import com.example.appquiz.viewModel.TestViewModel
 import kotlin.properties.Delegates
 
@@ -45,7 +44,11 @@ class DetailFragment : Fragment() {
         binding.btStartQuiz.setOnClickListener {
             idQuiz = arguments?.getInt("id")!!
             viewModel.id = idQuiz
-            replaceFragmentMainActivityCardGame(TestFragment())
+            replaceFragmentMainActivityQuizApp(TestFragment())
+        }
+
+        binding.icArrowHome.setOnClickListener {
+            replaceFragmentMainActivityQuizApp(HomeFragment())
         }
 
         return binding.root

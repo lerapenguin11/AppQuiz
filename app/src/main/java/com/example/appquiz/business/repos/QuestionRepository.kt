@@ -9,10 +9,7 @@ import com.example.appquiz.business.models.QuizModel
 import com.example.appquiz.business.models.TestModel
 
 class QuestionRepository() {
-
-    private lateinit var modelQuiz : QuizModel
     private lateinit var modelQuestion : TestModel
-    //var index : Int = 0
 
     @SuppressLint("SuspiciousIndentation")
     fun getQuestionData(id: Int) : LiveData<MutableList<TestModel>> {
@@ -39,8 +36,6 @@ class QuestionRepository() {
                 val option_d_position = j.option.get(0).option_d_position
                 val option_e_position = j.option.get(0).option_e_position
                 val countQuestion = j.countQuestion
-
-                //index++
 
                 val listQuestionModel = TestModel(
                     idQuiz = idItemQuiz,
